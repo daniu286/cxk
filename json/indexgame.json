@@ -1,0 +1,15 @@
+indexwebsystemmsg={
+	version:"1.0",
+	bowser:"Chrome",
+	type:"web/H5",
+	lang:"cn",
+	name:"KUNGAME",
+	from:"github",
+	JavaScriptVersion:"1.5"
+}
+indextxt={
+	turn:"设置"
+}
+gameurl=["cxkgame1.html",null,null,null,"http://124.223.82.198:666","https://fangkuai767.github.io/EatKun","http://jih.125ks.cn/cxk","http://jlh.125ks.cn/cxk"]
+imgchangeurl=["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg","./img/6.jpg","./img/7.jpg","./img/8.jpg","./img/9.jpg","./img/10.jpg"]
+keyword=["蔡徐坤扫雷","坤了个坤","吃掉坤哥","蔡徐坤打飞鸡","给鸽鸽打电话"]
