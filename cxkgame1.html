@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>蔡旭坤扫雷</title>
+		<style>
+			body{
+				font-size: 60px;
+				border: none;
+				text-align: center;
+				width:1000px;
+				height:1650px;
+				border: 1px solid black;
+			}
+			.img{
+				width:90px;
+				height:90px;
+			}
+			.table{
+				width:1000px;
+				height:1000px;
+				background-color: pink;
+			}
+			.btn{
+				width:100px;
+				height: 100px;
+				background-color: skyblue;
+				color:white;
+				font-size: 150%;
+			}
+			.lost{
+				width:600px;
+				height:300px;
+				opacity: 1.0;
+				background-color: gray;
+				color:black;
+				position: absolute;
+				top:500px;
+				left:200px;
+				display: none;
+			}
+			.btnb{
+				width:120px;height:60px;background-color: white;color:darkgray;border: none;font-size: 50px;
+			}
+		</style>
+		<script src="js/jquery.js"></script>
+	</head>
+	<body>
+		<table border="1px" class="table">
+			<tr>
+				<td name="main"><img src="img/3.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+			<tr>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+				<td name="main"><img src="img/1.jpg" class="img"></td>
+			</tr>
+		</table>
+		<br>
+		<div>
+			<input type="button" id="left" value="←" class="btn" onclick="move('left')">
+			<input type="button" id="right" value="→" class="btn" onclick="move('right')">
+			<input type="button" id="top" value="↑" class="btn" onclick="move('top')">
+			<input type="button" id="bottom" value="↓" class="btn" onclick="move('bottom')">
+			<div id="div"></div>
+			<span id="spa"></span>
+		</div>
+		<div class="lost">
+			<p>蔡徐坤，你输了</p>
+			<input type="button" value="重来" onclick="history.go(0)" class="btnb">
+			<button onclick="history.go(-1)" class="btnb">退出</button>
+		</div>
+		<script>
+			var mainarr=document.getElementsByName("main")
+			var timer;
+			var bl=false;
+			var timerest=120;
+			var end=new Audio("./bgm/end.mp3")
+			var clickm=new Audio("./bgm/click.mp3")
+			var left=$("#left");
+			var right=$("#right");
+			var top=$("#top");
+			var bottom=$("#bottom")
+			var img = document.getElementsByClassName("img");
+			for(j=0;j<10;j++){
+				var n =Math.floor(Math.random()*100)
+				if(img[n].name=="zhadan"){
+					j--
+				}else{
+				img[n].name="zhadan"
+				}
+			}
+			for(i=0;i<img.length;i++){
+				var num=Math.floor(Math.random()*10+1)
+				img[i].src="./img/"+num +".jpg"
+			}
+			img[0].name=null;
+			img[1].name=null;
+			img[10].name=null;
+			img[11].name=null;
+			img[0].src="./img/black.png"
+			var url="";
+			var lc=location.toString().split("")
+			for(p=0;p<13;p++){
+				lc.pop()
+				
+			}
+			for(o=0;o<lc.length;o++){
+				url=url+lc[o]
+			}
+			function move(dir){
+				if(bl==false){
+					timer=setInterval(function(){
+						timerest--
+						$("#spa").html("剩余时间：<font color=red>"+timerest+"秒</font>")
+						if(timerest==0){
+							clearInterval(timer)
+							$(".lost").html("时间到")
+							$(".lost").css("display","block")
+						}
+					},1000)
+					bl=true
+				}else{
+					
+				}
+				
+				var nowimg;
+				for(k=0;k<img.length;k++){
+					if(img[k].src==url+"img/black.png"){
+						nowimg=k
+					}
+				}
+				
+				
+				
+				switch(dir){
+					case "left":
+					if(nowimg==0||nowimg==10||nowimg==20||nowimg==30||nowimg==40||nowimg==50||nowimg==60||nowimg==70||nowimg==80||nowimg==90){
+						
+					}else{
+							img[nowimg].src="./img/chicken.png"
+							img[nowimg-1].src="./img/black.png"	
+					}
+					break;
+					case "right":
+					if(nowimg==9||nowimg==19||nowimg==29||nowimg==39||nowimg==49||nowimg==59||nowimg==69||nowimg==79||nowimg==89||nowimg==99){
+
+					}else{
+						img[nowimg].src="./img/chicken.png"
+						img[nowimg+1].src="./img/black.png"
+						
+					}
+					break;
+					case "top":
+					if(nowimg==0||nowimg==1||nowimg==2||nowimg==3||nowimg==4||nowimg==5||nowimg==6||nowimg==7||nowimg==8||nowimg==9){
+						
+					}else{
+						img[nowimg].src="./img/chicken.png"
+						img[nowimg-10].src="./img/black.png"
+						
+					}
+					break;
+					default:
+					if(nowimg==90||nowimg==91||nowimg==92||nowimg==93||nowimg==94||nowimg==95||nowimg==96||nowimg==97||nowimg==98||nowimg==99){
+						
+					}else{
+					img[nowimg].src="./img/chicken.png"
+					img[nowimg+10].src="./img/black.png"
+					}
+					break;
+				}
+				clickm.play()
+				
+				
+				for(k=0;k<img.length;k++){
+					if(img[k].src==url+"img/black.png"){
+						nowimg=k
+					}
+				}
+				check()
+				checkifend()
+				
+				function check(){
+					var znum=0;
+					if(nowimg==1||nowimg==2||nowimg==3||nowimg==4||nowimg==5||nowimg==6||nowimg==7||nowimg==8){//顶端
+						img[nowimg-1].name=="zhadan"?znum++:null;
+						img[nowimg+1].name=="zhadan"?znum++:null;
+						img[nowimg+9].name=="zhadan"?znum++:null;
+						img[nowimg+10].name=="zhadan"?znum++:null;
+						img[nowimg+11].name=="zhadan"?znum++:null;
+					}else if(nowimg==10||nowimg==20||nowimg==30||nowimg==40||nowimg==50||nowimg==60||nowimg==70||nowimg==80){//左侧
+						img[nowimg-10].name=="zhadan"?znum++:null;
+						img[nowimg-9].name=="zhadan"?znum++:null;
+						img[nowimg+1].name=="zhadan"?znum++:null;
+						img[nowimg+10].name=="zhadan"?znum++:null;
+						img[nowimg+11].name=="zhadan"?znum++:null;
+					}else if(nowimg==19||nowimg==29||nowimg==39||nowimg==49||nowimg==59||nowimg==69||nowimg==79||nowimg==89){//右侧
+						img[nowimg-10].name=="zhadan"?znum++:null;
+						img[nowimg-11].name=="zhadan"?znum++:null;
+						img[nowimg-1].name=="zhadan"?znum++:null;
+						img[nowimg+10].name=="zhadan"?znum++:null;
+						img[nowimg+9].name=="zhadan"?znum++:null;
+					}else if(nowimg==91||nowimg==92||nowimg==93||nowimg==94||nowimg==95||nowimg==96||nowimg==97||nowimg==98){//底端
+						img[nowimg-1].name=="zhadan"?znum++:null;
+						img[nowimg+1].name=="zhadan"?znum++:null;
+						img[nowimg-9].name=="zhadan"?znum++:null;
+						img[nowimg-10].name=="zhadan"?znum++:null;
+						img[nowimg-11].name=="zhadan"?znum++:null;
+					}else if(nowimg==0||nowimg==9||nowimg==90||nowimg==99){//角落
+						if(nowimg==0){
+							img[nowimg+1].name=="zhadan"?znum++:null;
+							img[nowimg+10].name=="zhadan"?znum++:null;
+							img[nowimg+11].name=="zhadan"?znum++:null;
+						}else if(nowimg==9){
+							img[nowimg-1].name=="zhadan"?znum++:null;
+							img[nowimg+9].name=="zhadan"?znum++:null;
+							img[nowimg+10].name=="zhadan"?znum++:null;
+						}else if(nowimg==90){
+							img[nowimg-10].name=="zhadan"?znum++:null;
+							img[nowimg-9].name=="zhadan"?znum++:null;
+							img[nowimg+1].name=="zhadan"?znum++:null;
+						}else{
+							img[nowimg-11].name=="zhadan"?znum++:null;
+							img[nowimg-10].name=="zhadan"?znum++:null;
+							img[nowimg-1].name=="zhadan"?znum++:null;
+						}
+					}else{
+						img[nowimg-11].name=="zhadan"?znum++:null;
+						img[nowimg-10].name=="zhadan"?znum++:null;
+						img[nowimg-9].name=="zhadan"?znum++:null;
+						img[nowimg-1].name=="zhadan"?znum++:null;
+						img[nowimg+1].name=="zhadan"?znum++:null;
+						img[nowimg+9].name=="zhadan"?znum++:null;
+						img[nowimg+10].name=="zhadan"?znum++:null;
+						img[nowimg+11].name=="zhadan"?znum++:null;
+					}
+					$("#div").html("附近雷数："+znum)
+				}
+				function checkifend(){
+					if(img[nowimg].name=="zhadan"){
+						clearInterval(timer)
+						$(".lost").css("display","block")
+						$(".table").css("opacity","0.5")
+						img[nowimg].src="./img/zhadan.png"
+						document.getElementById("left").disabled="disabled"
+						document.getElementById("right").disabled="disabled"
+						document.getElementById("top").disabled="disabled"
+						document.getElementById("bottom").disabled="disabled"
+						end.play()
+						for(t=0;t<img.length;t++){
+							if(img[t].name=="zhadan"){
+								img[t].src="./img/zhadan.png"
+								mainarr[t].style.backgroundColor="red"
+							}
+						}
+					}
+				}
+				
+			}
+			
+		</script>
+	</body>
+</html>
