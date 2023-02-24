@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>打地鸡</title>
+		<script src="js/jquery.js"></script>
+		<script>
+			var Script = document.createElement("script");
+			Script.src="json/indexgame.json"
+			document.head.appendChild(Script);
+		</script>
+		<style>
+			body{
+				width:1000px;
+				height:1650px;
+				border: none;
+				border: 1px solid black;
+				font-size: 60px;
+				text-align: center;
+			}
+			.main{
+				position: absolute;
+				top:100px;
+				width:930px;
+				height:1300px;
+				left:35px;
+				border-radius: 10%;
+				background:url(./img/background1.jpg);
+			}
+			.dirt{
+				position: absolute;
+				width:200px;
+				height:200px;
+				background: url(./img/dirt.jpg);
+                top:230px;
+				border: 5px solid black;
+			}
+			.btn{
+				width:250px;
+				height:80px;
+				font-size: 45px;
+				background-color: green;
+				color:white;
+				border-radius: 40%;
+				position: absolute;
+				top:1500px;
+				left:390px;
+			}
+			.img{
+				width:200px;
+				height:200px;
+				display: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="tit"></div>
+		<div class="main">
+			<div class="dirt" style="left:60px"><img src="" class="img"></div>
+			<div class="dirt" style="left:360px"><img src="" class="img"></div>
+			<div class="dirt" style="left:670px;"><img src="" class="img"></div>
+			<div class="dirt" style="left:60px;top:530px;"><img src="" class="img"></div>
+			<div class="dirt" style="left:360px;top:530px;"><img src="" class="img"></div>
+			<div class="dirt" style="left:670px;top:530px"><img src="" class="img"></div>
+			<div class="dirt" style="left:60px;top:840px;"><img src="" class="img"></div>
+			<div class="dirt" style="left:360px;top:840px;"><img src="" class="img"></div>
+			<div class="dirt" style="left:670px;top:840px"><img src="" class="img"></div>
+		</div>
+		<div class="ctrl">
+			<button class="btn" onclick="game()">开始游戏</button>
+		</div>
+		<script>
+			function _(str){
+							var a=str.indexOf("|")
+							var b=str.slice(0,a)
+							var c=str.slice(a+1,str.length)
+							if(c=="id")
+							return document.getElementById(b)
+							else if(c=="name")
+							return document.getElementsByName(b)
+							else if(c=="class")
+							return document.getElementsByClassName(b)
+							else if(c=="tag")
+							return document.getElementsByTagName(b)
+							else
+							console.error("Error:NotFound_Error:"+"'"+b+"'in"+"'"+c+"'")
+						}
+		</script>
+		<script>
+			for(j=0;j<_("img|class").length;j++){
+			_("img|class")[j].src="img/1.jpg"
+			}
+			$(document).ready(function(){
+				
+			})
+			function game(){
+				lost=()=>{
+					clearInterval(speedtimer)
+					clearInterval(gametimer)
+					alert("你输了")
+				}
+				var score=0
+				
+				
+				var speed=200;
+				$(".btn").attr("disabled","disabled")
+				
+				var gametimer=setInterval(function(){
+					var num=Math.floor(Math.random()*9)
+					if($(".img").eq(num).css("display")!="block"){
+						$(".img").eq(num).show(200,function(){
+							after(_("img|class")[num])
+						})
+					}else{
+						for(i=0;i<9;i++){
+							if($(".img").eq(i).css("display")=="none"){
+								$(".img").eq(i).show(200,function(){
+									after(_("img|class")[i])
+								})
+								i=9
+							}
+						}
+					}
+					
+				},speed)
+				
+				function after(obj){
+					obj.onclick=function(){
+						score++
+						obj.style.display="none"
+					}
+					setTimeout(function(){
+						if(obj.style.display=="block"){
+							lost()
+						}
+					},1500)
+				}
+				
+				
+			}
+
+		</script>
+	</body>
+</html>
