@@ -1,0 +1,20 @@
+indexwebsystemmsg={
+	version:"1.0",
+	bowser:"Chrome",
+	type:"web/H5",
+	lang:"cn",
+	name:"KUNGAME",
+	from:"github",
+	JavaScriptVersion:"1.5",
+	update:"2023/2/24",
+	IEUser:"unable"
+}
+indextxt={
+	turn:"设置",
+	searchertxt:"输入你想搜索的内容……",
+	maintxt:"原创区",
+	othertxt:"转载区(请左滑)"
+}
+gameurl=["cxkgame1.html","cxkgame2.html",null,null,"http://124.223.82.198:666","https://fangkuai767.github.io/EatKun","https://cdn.198434.com/cli/H5/sheep2sheepkun/","http://jlh.125ks.cn/cxk","https://blog.lewz.cn/k/"]
+imgchangeurl=["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg","./img/6.jpg","./img/7.jpg","./img/8.jpg","./img/9.jpg","./img/10.jpg"]
+keyword=["坤了个坤2","打地鸡","蔡徐坤扫雷","坤了个坤","吃掉坤哥","蔡徐坤打飞鸡","给鸽鸽打电话"]
